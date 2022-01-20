@@ -1,2 +1,2 @@
-# Three.js-Projects
-This repository cosist of project related to three.js in javascript with all amazing javascript 3D model used in websites.
+# Best 3D Animated Wallpaper 
+This repository consist of best 3d animated wallpaper for the website.
