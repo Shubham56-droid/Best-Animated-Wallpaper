@@ -1,0 +1,35 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    min-height: 100vh;
+    overflow: hidden;
+    background: rgb(0, 0, 0);
+}
+.container
+{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+.container .block
+{
+    position: relative;
+    width: 5vw;
+    height: 5vw;
+    background: url("./img/bg (1).jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    /* border: 1px solid #111;
+    box-sizing: border-box; */
+    transform-style: preserve-3d;
+}
+
+

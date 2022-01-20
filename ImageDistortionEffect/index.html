@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let container = document.querySelector('.container');
+        for(var i=0; i<=400; i++)
+        {
+            let block = document.createElement('div');
+            block.classList.add('block');
+            container.appendChild(block);
+        }
+
+        let block = document.querySelectorAll('.block');
+        let animation = anime.timeline({
+            targets:block,
+            easing:'easeInOutExpo',
+            loop:true,
+            delay: anime.stagger(10,{start:50})
+        })
+        animation
+        .add({
+            scale:0,
+            translateX : function(){
+                return anime.random(360,2100);
+            },
+            translateY : function(){
+                return anime.random(360,-2100);
+            },
+            rotate : function(){
+                return anime.random(-360,360);
+            },
+            duration : function(){
+                return anime.random(500,3000);
+            }
+        })
+
+        .add({
+            scale:1,
+            translateX :0,
+            translateY :0,
+            rotate :0,
+            duration : function(){
+                return anime.random(500,3000);
+            }
+        })
+    </script>
+</body>
+</html>
