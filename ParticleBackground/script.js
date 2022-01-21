@@ -36,7 +36,7 @@ class Particle {
     {
         ctx.beginPath();
         ctx.arc(this.x,this.y,this.size,Math.PI * 2,false);
-        ctx.fillStyle = '#FCB900';
+        ctx.fillStyle = '#000';
         ctx.fill();
     }
 
@@ -90,16 +90,76 @@ function init()
 {
     particalesArray = [];
     let numberOfParticle = (canvas.height * canvas.width)/9000;
-    for(let i=0; i<numberOfParticle;i++)
+    for(let i=0; i<numberOfParticle* 2;i++)
     {
         let size = (Math.random() * 5) + 1;
         let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
         let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
         let directionX = (Math.random() * 5) - 2.5;
         let directionY = (Math.random() * 5) - 2.5;
-        let color = '##FCB900';
+        let color = '#000';
 
         particalesArray.push(new Particle(x,y,directionX,directionY,size,color));
 
     }
 }
+
+
+
+//check if particle are close enough to draw line
+function connect()
+{
+    let opacityValue = 1;
+    for(let a = 0; a<particalesArray.length; a++)
+    {
+        for(let b=a; b<particalesArray.length; b++)
+        {
+            let distance = ((particalesArray[a].x - particalesArray[b].x)
+            *(particalesArray[a].x - particalesArray[b].x)) 
+            + ((particalesArray[a].y - particalesArray[b].y)
+            *(particalesArray[a].y - particalesArray[b].y)) ;
+            if(distance < (canvas.width/7) * (canvas.height/7)){
+                opacityValue = 1 - (distance/20000);
+                ctx.strokeStyle = 'rgba(77, 77, 77,' + opacityValue + ')';
+                ctx.beginPath();
+                ctx.moveTo(particalesArray[a].x, particalesArray[a].y);
+                ctx.lineTo(particalesArray[b].x, particalesArray[b].y);
+                ctx.stroke();
+            }
+        }
+    }
+}
+
+
+
+// animation Loop
+function animate()
+{
+    requestAnimationFrame(animate);
+    ctx.clearRect(0,0,innerWidth,innerHeight);
+    for(let i=0; i<particalesArray.length; i++)
+    {
+        particalesArray[i].update();
+    }
+    connect();
+}
+
+
+// resize event
+window.addEventListener('resize',
+function(){
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+    mouse.radius = ((canvas.height/80) * (canvas.height/80));
+    init();
+}
+);
+
+window.addEventListener('mouseout',
+function(){
+    mouse.x = undefined;
+    mouse.y = undefined;
+});
+
+init();
+animate();
