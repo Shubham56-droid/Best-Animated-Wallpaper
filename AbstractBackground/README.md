@@ -6,6 +6,6 @@
 <ol>
   <br/>
 <h3>Images</h3>
-<img src="./images/"/>
+<img src="./images/Screenshot (239).png"/>
 <h3>Link to thr page</h3>
 <a href="">click here</a>
