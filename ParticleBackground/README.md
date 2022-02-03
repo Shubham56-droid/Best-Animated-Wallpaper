@@ -8,6 +8,6 @@
   <li>JavaScript</li>
 </ul>
 <h2>Images</h2>
-<img src="./images/" />
+<img src="./images/Screenshot (243).png" />
 <h2>Link to website</h2>
-<a href="">click here</a>
+<a href="https://priceless-mirzakhani-ac9ba3.netlify.app/">click here</a>
