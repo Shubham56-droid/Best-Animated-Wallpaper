@@ -6,7 +6,6 @@
 <ol>
   <br/>
 <h2>Images</h2>
-<img src="./images/Screenshot (244).png"/>
 <img src="./images/Screenshot (245).png"/>
 <h3>Link to thr page</h3>
 <a href="https://hungry-keller-ba6800.netlify.app/">click here</a>
