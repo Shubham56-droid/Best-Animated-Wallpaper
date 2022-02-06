@@ -6,6 +6,6 @@
   <li>JavaScript</li>
 </ul>
 <h2>Images</h2>
-<img src="img/" />
+<img src="img/imagedistrot.gif" />
 <h2>Link To Webpage</h2>
 <a href="">click here</a>
