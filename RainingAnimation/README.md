@@ -6,7 +6,7 @@
   <li>JavaScript</li>
 </ul>
 <h2>Images</h2>
-<img src="images/" />
+<img src="images/Screenshot (248).png" />
 <h2>Link To Webpage</h2>
 <a href="">click here</a>
 
