@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'monospace';
+    font-size: 22px;
+}
+section
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: rgb(37, 37, 37);
+}
+section .text
+{
+    position: relative;
+    text-align: center;
+    color: rgb(20, 220, 187);
+    margin: 40px;
+    max-width: 650px;
+}
+section .text span
+{
+    position: relative;
+    display: inline-block;
+}
