@@ -8,6 +8,9 @@
 <h2>About</h2>
 <p>It is a flying text animation where text get sepred in a paragrph and return to its initial position. I have used anime.js for this effect.</p>
 <h2>Images</h2>
-<img src="./images/" />
+<img src="./images/Screenshot (251).png" />
+<img src="./images/Screenshot (252).png" />
+<img src="./images/Screenshot (253).png" />
+<img src="./images/Screenshot (254).png" />
 <h2>Links</h2>
 <a href="">Click here</a>
