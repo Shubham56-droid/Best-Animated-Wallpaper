@@ -1,0 +1,32 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    overflow: hidden;
+}
+section
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-position-x: center;
+    background-size: cover;
+    animation: animateBg 25s linear infinite ;
+}
+@keyframes animateBg
+{
+    0%
+    {
+        transform: scale(1);
+    }
+    50%
+    {
+        transform: scale(1.2);
+    }
+}
