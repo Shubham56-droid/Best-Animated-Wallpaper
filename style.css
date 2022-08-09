@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    overflow: hidden;
+}
+div{
+    position: absolute;
+    bottom:-10px;
+    left:0px;
+    height: 10px;
+    width: 10px;
+    background-color: aliceblue;
+    border-radius: 50%;
+}
+@keyframes moveup
+{
+    0%{
+        bottom:0px;
+    }
+    100%{
+        bottom:100vh;
+    }
+}
